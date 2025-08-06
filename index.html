@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halite & Ember — Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --text: #ffffff;
+      --accent: #ff914d;
+      --font-main: 'Raleway', sans-serif;
+      --font-heading: 'Montserrat', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    .countdown {
+      font-size: 1.5rem;
+      color: var(--accent);
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Halite & Ember</h1>
+  <p>We're crafting something extraordinary. Our full site will launch soon. Stay tuned!</p>
+  <div class="countdown" id="countdown">Launching in 30 days...</div>
+
+  <footer>
+    &copy; <span id="year"></span> Halite & Ember. All rights reserved.
+  </footer>
+
+  <script>
+    // Countdown (30 days from now)
+    const countdownEl = document.getElementById('countdown');
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 30);
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = launchDate - now;
+
+      if (diff <= 0) {
+        countdownEl.textContent = "We're live!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownEl.textContent = `Launching in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
