@@ -23,7 +23,7 @@
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="#" class="nav__logo">
-                    <img src="assets/img/logo_white.png" alt="logo" style="width: 100px;" class="nav__logo-img">
+                    <img src="assets/img/logo_white.png" alt="logo" style="width: 85px;" class="nav__logo-img">
                 </a>
 
                 <div class="nav__menu" id="nav-menu">
@@ -33,19 +33,7 @@
                                 <i class="ri-home-5-line"></i> Home
                             </a>
                         </li>
-<!--
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="ri-trophy-line"></i> Mission
-                            </a>
-                        </li>
 
-                        <li class="nav__item">
-                            <a href="#qualification" class="nav__link">
-                                <i class="ri-book-open-line"></i> Vision
-                            </a>
-                        </li>
--->
                         <li class="nav__item">
                             <a href="#services" class="nav__link">
                                 <i class="ri-briefcase-line"></i> Services
@@ -98,11 +86,8 @@
 
                         <div class="home__blob grid">
                             <div class="home__perfil">
-                                <img src="assets/img/logo_white.png" alt="home perfil">
+                                <img src="assets/img/logo_white.png" alt="home perfil" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
-
-                            <!-- <img src="assets/img/shape-wawes.svg" alt="" class="home__shape-wawes"> -->
-                            <!-- <img src="assets/img/shape-circle.svg" alt="" class="home__shape-circle"> -->
                         </div>
 
                         <ul class="home__social">
@@ -135,33 +120,35 @@
 
                         <div>
                             <h3 class="home__info-title">
+                              <br><br>
                                 CONTACT
                             </h3>
 
                             <p class="home__info-description">
                               610 Bath House, 5, Arboretum Place,Barking, London IG11 7PS
-                              +44 7425775940
-                              inquiries@haliteandember.co.uk
+                              <br><br>
+                              +44 742 577 5940<br><br>
+                              inquiries@haliteandember.co.uk<br><br>
                               www.haliteandember.co.uk
                             </p>
                         </div>
 
                         <div>
                             <h3 class="home__info-title">
-                                NATURE OF BUSINESS (SIC)
+                                <br><br><br>NATURE OF BUSINESS (SIC)
                             </h3>
 
                             <p class="home__info-description">
                                 68100 - Buying and selling of own real estate
-                                <br>
+                                <br><br>
                                 62020 - Information technology consultancy activities
-                                <br>
+                                <br><br>
                                 62090 - Other information technology service activities
-                                <br>
+                                <br><br>
                                 62012 - Business and domestic software development
-                                <br>
+                                <br><br>
                                 70229 - Management consultancy activities other than financial management
-                                <br>
+                                <br><br>
                                 82990 - Other business support service activities not elsewhere classified
                             </p>
                         </div>
@@ -270,7 +257,7 @@
                         <div class="swiper-wrapper">
                             <!--==================== PROJECT 1 ====================-->
                             <div class="projects__content swiper-slide">
-                                <img src="assets/img/Gemini_Stock_Image.jpeg" alt="projects image" class="projects__img">
+                                <img src="assets/img/" alt="projects image" class="projects__img">
 
                                 <div>
                                     <span class="projects__subtitle"></span>
@@ -284,7 +271,7 @@
 
                             <!--==================== PROJECT 2 ====================-->
                             <div class="projects__content swiper-slide">
-                                <img src="assets/img/server.webp" alt="projects image" class="projects__img">
+                                <img src="assets/img/" alt="projects image" class="projects__img">
 
                                 <div>
                                     <span class="projects__subtitle"></span>
@@ -298,7 +285,7 @@
 
                             <!--==================== PROJECT 3 ====================-->
                             <div class="projects__content swiper-slide">
-                                <img src="assets/img/stocks.jpg.optimal.jpg" alt="projects image" class="projects__img">
+                                <im src="assets/img/" alt="projects image" class="projects__img">
 
                                 <div>
                                     <span class="projects__subtitle"></span>
@@ -312,7 +299,7 @@
 
                             <!--==================== PROJECT 4 ====================-->
                             <div class="projects__content swiper-slide">
-                                <img src="assets/img/schema.png" alt="projects image" class="projects__img">
+                                <im src="assets/img/" alt="projects image" class="projects__img">
 
                                 <div>
                                     <span class="projects__subtitle"></span>
@@ -406,7 +393,7 @@
 
                             <div class="contact__data">
                                 <span class="contact__data-title">Whatsapp</span>
-                                <span class="contact__data-info">+447425775940</span>
+                                <span class="contact__data-info">+44 742 577 5940</span>
 
                                 <a href="https://api.whatsapp.com/send?phone=447425775940&text=Hello, more information!" target="_blank" class="contact__button">
                                     Message us <i class="ri-arrow-right-line"></i>
@@ -491,10 +478,7 @@
                         <i class="ri-twitter-line"></i>
                     </a>
                 </ul>
-
-                <span class="footer__copy">
-                    &#169; Copyright Halite & Ember. All rights reserved 
-                </span>
+                <p>&#169; <span id="year" ></span> Copyright Halite & Ember. All rights reserved.</p>                
             </div>
         </footer>
 
@@ -515,5 +499,7 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+
+        <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
     </body>
 </html>
