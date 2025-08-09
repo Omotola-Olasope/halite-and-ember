@@ -1,56 +1,519 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halite & Ember</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <img src="assets/img/logo_white.png" alt="Halite & Ember Logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#values">Values</a></li>
-      </ul>
-    </nav>
-  </header>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <main>
-    <section class="hero">
-      <h1>Halite & Ember</h1>
-      <p>Acquiring, developing, and managing purpose-driven properties with enduring integrity.</p>
-    </section>
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-    <section id="mission">
-      <h2>Mission</h2>
-      <p>Halite & Ember exists to acquire, develop, and manage purpose-driven properties with enduring integrity, operational excellence, and a human-first mindset, ensuring every place we touch preserves value and radiates trust.</p>
-    </section>
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <section id="vision">
-      <h2>Vision</h2>
-      <p>To be a trusted beacon of value and light in the property world, transforming spaces into sanctuaries and empowering lives through ownership, access, and enduring quality.</p>
-    </section>
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-    <section id="values">
-      <h2>Values — H.E.A.R.T. Framework</h2>
-      <ul class="values-list">
-        <li><strong>Honesty & Integrity</strong> – Our word is our bond. We conduct business with full transparency and moral clarity.</li>
-        <li><strong>Excellence in Execution</strong> – We sweat the details. Every transaction, every renovation, every tenant experience must reflect our standard.</li>
-        <li><strong>Accountability</strong> – We own our actions. We follow through on our commitments, especially when no one is watching.</li>
-        <li><strong>Respect for People & Property</strong> – We treat our clients, tenants, and assets with deep respect, honouring relationships and responsibility.</li>
-        <li><strong>Transformative Impact</strong> – We aim to leave places and people better than we found them, always.</li>
-      </ul>
-    </section>
-  </main>
+        <title>Halite & Ember Ltd</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="assets/img/logo_white.png" alt="logo" style="width: 100px;" class="nav__logo-img">
+                </a>
 
-  <footer class="site-footer">
-    &copy; <span id="year"></span> Halite & Ember. All rights reserved.
-  </footer>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="ri-home-5-line"></i> Home
+                            </a>
+                        </li>
+<!--
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="ri-trophy-line"></i> Mission
+                            </a>
+                        </li>
 
-  <script src="assets/js/main.js"></script>
-</body>
+                        <li class="nav__item">
+                            <a href="#qualification" class="nav__link">
+                                <i class="ri-book-open-line"></i> Vision
+                            </a>
+                        </li>
+-->
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                <i class="ri-briefcase-line"></i> Services
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">
+                                <i class="ri-image-line"></i> Projects
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="ri-chat-3-line"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Close button -->
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__buttons">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <!-- Toggle button -->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-4-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid section__border">
+                    <div class="home__data grid">
+                        <h1 class="home__title">
+                            Halite & Ember
+                            <br>
+                            <br>
+                            Acquiring, developing, and managing purpose driven properties with enduring integrity.
+                        </h1>
+
+                        <div class="home__blob grid">
+                            <div class="home__perfil">
+                                <img src="assets/img/logo_white.png" alt="home perfil">
+                            </div>
+
+                            <!-- <img src="assets/img/shape-wawes.svg" alt="" class="home__shape-wawes"> -->
+                            <!-- <img src="assets/img/shape-circle.svg" alt="" class="home__shape-circle"> -->
+                        </div>
+
+                        <ul class="home__social">
+                            <a href="https://www.linkedin.com/in/haliteandember" target="_blank" class="home__social-link">
+                                <i class="ri-linkedin-box-line"></i>
+                            </a>
+
+                            <a href="https://instagram.com/haliteandember" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+
+                            <a href="https://twitter.com/haliteandember" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-line"></i>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <!--==================== HOME INFO 1====================-->
+                    <div class="home__info">
+                        <div>
+                            <h3 class="home__info-title">
+                                MISSION
+                            </h3>
+
+                            <p class="home__info-description">
+                                Halite & Ember exists to acquire, develop, and manage purpose driven property with enduring integrity, 
+                                operational excellence, and a human-first mindset, ensuring every place we touch preserves value and radiates trust.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="home__info-title">
+                                CONTACT
+                            </h3>
+
+                            <p class="home__info-description">
+                              610 Bath House, 5, Arboretum Place,Barking, London IG11 7PS
+                              +44 7425775940
+                              inquiries@haliteandember.co.uk
+                              www.haliteandember.co.uk
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="home__info-title">
+                                NATURE OF BUSINESS (SIC)
+                            </h3>
+
+                            <p class="home__info-description">
+                                68100 - Buying and selling of own real estate
+                                <br>
+                                62020 - Information technology consultancy activities
+                                <br>
+                                62090 - Other information technology service activities
+                                <br>
+                                62012 - Business and domestic software development
+                                <br>
+                                70229 - Management consultancy activities other than financial management
+                                <br>
+                                82990 - Other business support service activities not elsewhere classified
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--==================== HOME INFO 2====================-->
+                    <div class="home__info">
+                        <div>
+                            <h3 class="home__info-title">
+                                YEARS OF EXPERIENCE
+                            </h3>
+
+                            <p class="home__info-number">
+                                00+
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="home__info-title">
+                                COMPLETED PROJECTS
+                            </h3>
+
+                            <p class="home__info-number">
+                                00
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="home__info-title">
+                                PARTNERSHIPS/BRANDS
+                            </h3>
+
+                            <p class="home__info-number">
+                                00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SERVICES ====================-->
+            <section class="services section" id="services">
+                <h2 class="section__title">Services</h2>
+                <span class="section__subtitle">What We Offer</span>
+
+                <div class="services__container container grid section__border">
+                    <div class="services__card">
+                        <i class="ri-database-line"></i>
+
+                        <h2 class="services__title">
+                            Property Acquisition
+                        </h2>
+
+                        <p class="services__description">
+                            Acquire, develop, and sell real estate assets, 
+                            focusing on properties that combine long-term value 
+                            with strategic growth opportunities.
+                        </p>
+
+                        <div class="services__border"></div>
+                    </div>
+
+                    <div class="services__card">
+                        <i class="ri-settings-2-line"></i>
+
+                        <h2 class="services__title">
+                            Technology <br>
+                            Consulting
+                        </h2>
+
+                        <p class="services__description">
+                            Provide businesses with tailored technology strategies, 
+                            custom applications, and robust support services 
+                            that enhance operational efficiency.
+                        </p>
+
+                        <div class="services__border"></div>
+                    </div>
+
+                    <div class="services__card">
+                        <i class="ri-database-2-line"></i>
+
+                        <h2 class="services__title">
+                            Business <br>
+                            Advisory
+                        </h2>
+
+                        <p class="services__description">
+                            Deliver management and business support services that 
+                            empower organisations, optimise performance operations, 
+                            and unlock new avenues for growth.
+                        </p>
+
+                        <div class="services__border"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PROJECTS ====================-->
+            <section class="projects section" id="projects">
+                <h2 class="section__title">Projects</h2>
+                <span class="section__subtitle">Most Recent Work</span>
+
+                <div class="container section__border">
+                    <div class="projects__container swiper">
+                        <div class="swiper-wrapper">
+                            <!--==================== PROJECT 1 ====================-->
+                            <div class="projects__content swiper-slide">
+                                <img src="assets/img/Gemini_Stock_Image.jpeg" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle"></span>
+                                    <h1 class="projects__title"></h1>
+
+                                    <a href="" class="projects__button">
+                                        <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--==================== PROJECT 2 ====================-->
+                            <div class="projects__content swiper-slide">
+                                <img src="assets/img/server.webp" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle"></span>
+                                    <h1 class="projects__title"></h1>
+
+                                    <a href="" class="projects__button">
+                                      <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--==================== PROJECT 3 ====================-->
+                            <div class="projects__content swiper-slide">
+                                <img src="assets/img/stocks.jpg.optimal.jpg" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle"></span>
+                                    <h1 class="projects__title"></h1>
+
+                                    <a href="" class="projects__button">
+                                        <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--==================== PROJECT 4 ====================-->
+                            <div class="projects__content swiper-slide">
+                                <img src="assets/img/schema.png" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle"></span>
+                                    <h1 class="projects__title"></h1>
+
+                                    <a href="" class="projects__button">
+                                        <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Swipe arrows -->
+                        <div class="swiper-button-next">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
+
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </div>
+
+                        <!-- Swiper pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== TESTIMONIAL ====================-->
+            <section class="testimonial section">
+                <h2 class="section__title">Testimonial</h2>
+                <span class="section__subtitle">Our Clients and Business Partners are Saying</span>
+
+                <div class="container section__border">
+                    <div class="testimonial__container swiper">
+                        <div class="swiper-wrapper">
+                            <!--==================== TESTIMONIAL 1 ====================-->
+                            <div class="testimonial__content swiper-slide">
+                                <p class="testimonial__description">
+                                    
+                                </p>
+
+                                <div>
+                                    <h3 class="testimonial__name"></h3>
+                                    <span class="testimonial__subtitle"></span>
+                                </div>
+                            </div>
+
+                            <!--==================== TESTIMONIAL 2 ====================-->
+                            <div class="testimonial__content swiper-slide">
+                                <p class="testimonial__description">
+                                    
+                                </p>
+
+                                <div>
+                                    <h3 class="testimonial__name"></h3>
+                                    <span class="testimonial__subtitle"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Swiper arrows -->
+                        <div class="swiper-button-next">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
+
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="assets/img/shape-wawes.svg" alt="testimonial image" class="testimonial__img">
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section" id="contact">
+                <h2 class="section__title">Contact Us</h2>
+                <span class="section__subtitle">Get in touch</span>
+
+                <div class="contact__container container grid section__border">
+                    <div class="contact__content">
+                        <h3 class="contact__title">
+                            <i class="ri-chat-3-line"></i>Talk to us
+                        </h3>
+
+                        <div class="contact__info">
+                            <div class="contact__data">
+                                <span class="contact__data-title">Email</span>
+                                <span class="contact__data-info">inquiries@haliteandember.co.uk</span>
+                            </div>
+
+                            <div class="contact__data">
+                                <span class="contact__data-title">Whatsapp</span>
+                                <span class="contact__data-info">+447425775940</span>
+
+                                <a href="https://api.whatsapp.com/send?phone=447425775940&text=Hello, more information!" target="_blank" class="contact__button">
+                                    Message us <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact__data">
+                                <span class="contact__data-title">LinkedIN</span>
+                                <span class="contact__data-info">@haliteandember</span>
+
+                                <a href="https://www.linkedin.com/in/omotola-olasope" target="_blank" class="contact__button">
+                                    Connect with us <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact__content">
+                        <h3 class="contact__title">
+                            <i class="ri-send-plane-line"></i> Write us your project
+                        </h3>
+
+                        <form action="" class="contact__form" id="contact-form">
+                            <div class="contact__form-div">
+                                <label class="contact__form-tag">Name</label>
+                                <input type="text" name="user_name" required placeholder="Write your name" class="contact__form-input" id="contact-name">
+                            </div>
+
+                            <div class="contact__form-div">
+                                <label class="contact__form-tag">Mail</label>
+                                <input type="text" name="user_email" required placeholder="Write your email" class="contact__form-input" id="contact-email">
+                            </div>
+
+                            <div class="contact__form-div contact__form-area">
+                                <label class="contact__form-tag">Project</label>
+                                <textarea name="user_project" placeholder="Write your project" id="contact-project" class="contact__form-input"></textarea>
+                            </div>
+
+                            <!-- <p class="contact__message" id="contact-message">Message</p> -->
+
+                            <button type="submit" class="contact__button">
+                                Submit <i class="ri-arrow-right-up-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container container">
+                <h1 class="footer__title"><img src="assets/img/logo_white.png" style="max-width: 150px;" alt=""><br>Halite & Ember</h1>
+                <p>"We are the salt of the earth and the light of the world. By preserving value and radiating light, we shape lasting legacies."</p>
+                <br>
+                <p>Halite & Ember Ltd is registered in England and Wales. Company No: 16634355</p>
+
+                <ul class="footer__list">
+                    <li>
+                        <a href="#home" class="footer__link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#services" class="footer__link">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects" class="footer__link">Projects</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__social">
+                    <a href="https://www.linkedin.com/in/haliteandember" target="_blank" class="footer__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+
+                    <a href="https://instagram.com/haliteandember" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a href="https://twitter.com/haliteandember" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-line"></i>
+                    </a>
+                </ul>
+
+                <span class="footer__copy">
+                    &#169; Copyright Halite & Ember. All rights reserved 
+                </span>
+            </div>
+        </footer>
+
+
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line"></i>
+        </a>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        
+        <!--=============== EMAIL JS ===============-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
