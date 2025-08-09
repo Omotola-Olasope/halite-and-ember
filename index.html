@@ -2,103 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Halite & Ember — Coming Soon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0e0e0e;
-      --text: #ffffff;
-      --accent: #ff914d;
-      --font-main: 'Raleway', sans-serif;
-      --font-heading: 'Montserrat', sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: var(--font-main);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 500px;
-    }
-
-    .countdown {
-      font-size: 1.5rem;
-      color: var(--accent);
-      font-weight: bold;
-      margin-top: 1rem;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halite & Ember</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <img src="./assets/img/logo_white.png" alt="Halite & Ember Logo" style="width: 400px; margin-bottom: 1rem;">
-  <h1>Halite & Ember</h1>
-  <p>We're crafting something extraordinary. Our full site will launch soon. Stay tuned!</p>
-  <div class="countdown" id="countdown">Launching in 30 days...</div>
+  <header class="site-header">
+    <img src="assets/img/logo_white.png" alt="Halite & Ember Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#values">Values</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <footer>
+  <main>
+    <section class="hero">
+      <h1>Halite & Ember</h1>
+      <p>Acquiring, developing, and managing purpose-driven properties with enduring integrity.</p>
+    </section>
+
+    <section id="mission">
+      <h2>Mission</h2>
+      <p>Halite & Ember exists to acquire, develop, and manage purpose-driven properties with enduring integrity, operational excellence, and a human-first mindset, ensuring every place we touch preserves value and radiates trust.</p>
+    </section>
+
+    <section id="vision">
+      <h2>Vision</h2>
+      <p>To be a trusted beacon of value and light in the property world, transforming spaces into sanctuaries and empowering lives through ownership, access, and enduring quality.</p>
+    </section>
+
+    <section id="values">
+      <h2>Values — H.E.A.R.T. Framework</h2>
+      <ul class="values-list">
+        <li><strong>Honesty & Integrity</strong> – Our word is our bond. We conduct business with full transparency and moral clarity.</li>
+        <li><strong>Excellence in Execution</strong> – We sweat the details. Every transaction, every renovation, every tenant experience must reflect our standard.</li>
+        <li><strong>Accountability</strong> – We own our actions. We follow through on our commitments, especially when no one is watching.</li>
+        <li><strong>Respect for People & Property</strong> – We treat our clients, tenants, and assets with deep respect, honouring relationships and responsibility.</li>
+        <li><strong>Transformative Impact</strong> – We aim to leave places and people better than we found them, always.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     &copy; <span id="year"></span> Halite & Ember. All rights reserved.
   </footer>
 
-  <script>
-    // Countdown (30 days from now)
-    const countdownEl = document.getElementById('countdown');
-    const launchDate = new Date();
-    launchDate.setDate(launchDate.getDate() + 30);
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = launchDate - now;
-
-      if (diff <= 0) {
-        countdownEl.textContent = "We're live!";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      countdownEl.textContent = `Launching in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    // Update year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
